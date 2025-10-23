@@ -9,7 +9,7 @@ from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 
 #upload pdf file
-st.header("My ChatBot")
+st.header("FM's Tiny Chatbot")
 with st.sidebar :
     st.title("Open Document")
     file = st.file_uploader("Uplodad PDF file",type="pdf")
@@ -60,4 +60,5 @@ if file is not None:
     )
     response = resp["choices"][0]["message"]["content"].strip()
     st.markdown("**Response:**")
+
     st.write(response)
