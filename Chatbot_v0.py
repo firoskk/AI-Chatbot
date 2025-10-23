@@ -10,7 +10,7 @@ from langchain.chains.question_answering import load_qa_chain
 
 #upload pdf file
 st.header("FM's Tiny Chatbot\n")
-st.header("Upload your document and ask any question related to that document")
+st.chat_message("Upload your document and ask any question related to that document")
 with st.sidebar :
     st.title("Open PDF Document")
     file = st.file_uploader("Uplodad PDF file",type="pdf")
@@ -63,4 +63,5 @@ if file is not None:
     st.markdown("**Response:**")
 
     st.write(response)
+
 
