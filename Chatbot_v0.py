@@ -9,9 +9,10 @@ from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 
 #upload pdf file
-st.header("FM's Tiny Chatbot")
+st.header("FM's Tiny Chatbot\n")
+st.header("Upload your document and ask any question related to that document")
 with st.sidebar :
-    st.title("Open Document")
+    st.title("Open PDF Document")
     file = st.file_uploader("Uplodad PDF file",type="pdf")
 
 #check the version
@@ -62,3 +63,4 @@ if file is not None:
     st.markdown("**Response:**")
 
     st.write(response)
+
